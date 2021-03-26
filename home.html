@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  
+
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="ContactFrom_v6/index.html">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Take the  strain</h2>
+                <p>Get the latest Reebok news, videos and headlines.
+                    Explore more for<br>
+                     Reebok breaking news, opinions,
+                     special reports and more on mint.<br>
+                     Reebok UNLOCKED is the loyalty program that brings the perks.
+                     Unlock free shipping and returns, discounts, rewards and more.
+                     You in?</p>
+                     
+            </div>
+
+            <div  class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1542325059222-f8a794ccf28d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cmVlYm9rfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></div>
+                      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600269453258-30a2e10c72f3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></div>
+                      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1578314921455-34dd4626b38d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></div>
+                      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1603852636585-8165dd29aadf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDF8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></div>
+                      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1582740510910-388f37f9d4b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></div>
+                    </div>
+                  </div>
+            </div>        
+
+
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Reebok/"><img src="facebook.png"></a></li>
+            <li><a href="https://twitter.com/Reebok?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/reebok/?hl=en"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: '2',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          loop:true,
+        });
+
+        var preloader=document.getElementbyclass('conatiner');
+        function myfun(){
+          preloader.style.display='none';
+        }
+      </script>
+
+ 
+</body>
+</html>

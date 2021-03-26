@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: rgb(34, 102, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: consolas;
+    }
+    
+    .container{
+        width: 1000px;
+        padding-left:50px;
+        position: relative;
+        display: inline-block;
+        justify-content: space-between;
+    }
+    
+    .container .card{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .container .card .face{
+        width: 300px;
+        height: 200px;
+        transition: 0.5s;
+    }
+    
+    .container .card .face.face1{
+        position: relative;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+    }
+    
+    .container .card:hover .face.face1{
+        background: #ff0057;
+        transform: translateY(0);
+    }
+    
+    .container .card .face.face1 .content{
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    
+    .container .card:hover .face.face1 .content{
+        opacity: 1;
+    }
+    
+    .container .card .face.face1 .content img{
+        max-width: 200px;
+    }
+    
+    .container .card .face.face1 .content h3{
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .container .card .face.face2{
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-100px);
+    }
+    
+    .container .card:hover .face.face2{
+        transform: translateY(0);
+    }
+    
+    .container .card .face.face2 .content p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container .card .face.face2 .content a{
+        margin: 15px 0 0;
+        display:  inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: #333;
+        padding: 5px;
+        border: 1px solid #333;
+    }
+    
+    .container .card .face.face2 .content a:hover{
+        background: #333;
+        color: #fff;
+    }
+    
+    
+    
+    .container2{
+        width: 1000px;
+        
+        position: relative;
+        display: inline-block;
+        justify-content: space-between;
+    }
+    
+    .container2 .card{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .container2 .card .face{
+        width: 300px;
+        height: 200px;
+        transition: 0.5s;
+    }
+    
+    .container2 .card .face.face1{
+        position: relative;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+    }
+    
+    .container2 .card:hover .face.face1{
+        background: #ff0057;
+        transform: translateY(0);
+    }
+    
+    .container2 .card .face.face1 .content{
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    
+    .container2 .card:hover .face.face1 .content{
+        opacity: 1;
+    }
+    
+    .container2 .card .face.face1 .content img{
+        max-width: 200px;
+    }
+    
+    .container2 .card .face.face1 .content h3{
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .container2 .card .face.face2{
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-100px);
+    }
+    
+    .container2 .card:hover .face.face2{
+        transform: translateY(0);
+    }
+    
+    .container2 .card .face.face2 .content p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container2 .card .face.face2 .content a{
+        margin: 15px 0 0;
+        display:  inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: #333;
+        padding: 5px;
+        border: 1px solid #333;
+    }
+    
+    .container2 .card .face.face2 .content a:hover{
+        background: #333;
+        color: #fff;
+    }
+    
+    .container3{
+        width: 1000px;
+        padding-left:50px;
+        position: relative;
+        display: inline-block;
+        justify-content: space-between;
+    }
+    
+    .container3 .card{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .container3 .card .face{
+        width: 300px;
+        height: 200px;
+        transition: 0.5s;
+    }
+    
+    .container3 .card .face.face1{
+        position: relative;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+    }
+    
+    .container3 .card:hover .face.face1{
+        background: #ff0057;
+        transform: translateY(0);
+    }
+    
+    .container3 .card .face.face1 .content{
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    
+    .container3 .card:hover .face.face1 .content{
+        opacity: 1;
+    }
+    
+    .container3 .card .face.face1 .content img{
+        max-width: 200px;
+    }
+    
+    .container3 .card .face.face1 .content h3{
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .container3 .card .face.face2{
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-100px);
+    }
+    
+    .container3 .card:hover .face.face2{
+        transform: translateY(0);
+    }
+    
+    .container3 .card .face.face2 .content p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container3 .card .face.face2 .content a{
+        margin: 15px 0 0;
+        display:  inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: #333;
+        padding: 5px;
+        border: 1px solid #333;
+    }
+    
+    .container3 .card .face.face2 .content a:hover{
+        background: #333;
+        color: #fff;
+    }
+    
+    .container4{
+        width: 1000px;
+        
+        position: relative;
+        display: inline-block;
+        justify-content: space-between;
+    }
+    
+    .container4 .card{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .container4 .card .face{
+        width: 300px;
+        height: 200px;
+        transition: 0.5s;
+    }
+    
+    .container4 .card .face.face1{
+        position: relative;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+    }
+    
+    .container4 .card:hover .face.face1{
+        background: #ff0057;
+        transform: translateY(0);
+    }
+    
+    .container4 .card .face.face1 .content{
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    
+    .container4 .card:hover .face.face1 .content{
+        opacity: 1;
+    }
+    
+    .container4 .card .face.face1 .content img{
+        max-width: 200px;
+    }
+    
+    .container4 .card .face.face1 .content h3{
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .container4 .card .face.face2{
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-100px);
+    }
+    
+    .container4 .card:hover .face.face2{
+        transform: translateY(0);
+    }
+    
+    .container4 .card .face.face2 .content p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container4 .card .face.face2 .content a{
+        margin: 15px 0 0;
+        display:  inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: #333;
+        padding: 5px;
+        border: 1px solid #333;
+    }
+    
+    .container4 .card .face.face2 .content a:hover{
+        background: #333;
+        color: #fff;
+    }
+    a{
+	background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+    text-decoration:none;
+
+    }
+    
+    </style>
+    <body>
+        <a href="home.html">Homepage</a>
+        <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1616279967983-ec413476e824?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Gymming</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>The reconfigurable Reebok Treadmills broadens your workout options for total home training; providing all the tools needed for limitless workouts.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvbWUlMjB3b3Jrb3V0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Exercise</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Introduced to health clubs over 25 years ago, the Reebok Step is the original aerobic platform.Helping to boost your fitness with full body workouts, the step is suitable for all abilities both in classes and at home..</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y3JpY2tldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Cricket</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Leveraging the skills of our qualified team of professionals, we are engaged in providing Reebok Cricket Bats ..
+                            - Grade I English Willow
+                            - Top of the Line Reebok Cricket bat
+                        </p>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="container2">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1549037173-e3b717902c57?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8c2hpcnRzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Shirts</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Sweat it out with the Reebok short sleeved training tee for men. The all-polyester fabric keeps you comfortable when you work out. </p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1580977251970-221b2fa3f554?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Shoes</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>The SPEEDWICK construction effectively wicks moisture away from the skin, helping you stay dry and comfortable while you train or go for a run</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1530389912609-9a007b3c38a4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVlYm9rfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Jogging</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Between bad weather and long workdays, you still find the motivation to get your miles in. These men's Reebok running shoes support your dedication with a Floatride Energy midsole that delivers a lightweight feel and a smooth, responsive ride..</p>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="container3">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1580977252013-f5d20c3303ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8cmVlYm9rfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Running</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Superbly crafted Reebok Super Duo running shoes for men. Made with EVA midsole which provides ultra lightweight responsive cushioning and increased flexibility, designed to provide midfoot support from the inside out.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1599989571484-100fa5168bf3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fHJlZWJva3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Dumbell</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>The latest evolution of the classic Reebok Step, the Reebok Dumbells expands your workout options for both bodyweight and weighted training.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1574695005816-e446bfe50405?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGplYW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Jeans</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Wear these running pants on the track, road or trail. It's made of Speedwick fabric that wicks away sweat to keep you dry. Transform your look quickly with ankle zips. Stretchy fabric has a slight sheen.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="container4">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Fashion</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Outfits that will make you comfortably beautiful.Wear to be confident.We can customize it for you.Gorgeous will be different.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuZ2xhc3Nlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Sunglasses</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Lightweight, comfortable eyeglasses from Reebok transition from the office to the gym with ease. Explore versatile, sophisticated frames for athletes and adventurers who appreciate refined design..</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1610413356812-0a1c23dde381?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTJ8fHJlZWJvayUyMCUyMGJhZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        <h3>Bags</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Keep it simple. This backpack has just enough space for workout clothes and daily essentials. A front zip pocket secures keys and small items so they don't get lost in the main compartment..</p>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
